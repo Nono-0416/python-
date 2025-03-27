@@ -1,0 +1,29 @@
+ini			system.ini
+
+start
+
+init		browser					chrome
+
+~click		browser.gmail_test		button_submit		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=search1,#session#=login
+
+~click		browser.gmail_test		button_submit		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=search2,#session#=login
+
+~set		browser.gmail_test		textbox_account		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=search3,#session#=login,#value#=wei.huang@gmail.com
+
+~click		browser.gmail_test		button_submit		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=search4,#session#=login
+
+~set		browser.gmail_test		textbox_password	#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=search5,#session#=login,#value#=XXXXXxxx
+
+~click		browser.gmail_test		button_submit		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=search6,#session#=login
+
+sleep		20
+
+~click		browser.gmail_test		email_search		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=motion1,#session#=email
+
+~set		browser.gmail_test		email_search		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=motion1,#session#=email,#value#=Welcome to NextDrive
+
+enter		browser.gmail_test		email_search		#folder#=ini,#configfile#=gmail_test.conf,#xpath_id#=motion1,#session#=email
+
+verify		browser.gmail_test		email_exist			#folder#=ini,#configfile#=gmail_test.conf
+
+end
